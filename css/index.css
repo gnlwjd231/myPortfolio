@@ -1,0 +1,170 @@
+body{
+    background:#EFEBEC;
+    color:#333;
+    display: flex;
+    justify-content: center;
+    margin:0;
+    font-family: 'Noto Sans KR';
+}
+
+body > div.container{
+    width:80%;
+    height: 759px;
+    position: relative;
+}
+
+#nametagImgContainer{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+}
+
+#nameTagImg{
+    width:70%;
+    left: calc(50% - 105px);
+    position: absolute;
+}
+
+#keywordContainer{
+    height: 500px;
+    opacity: 0;
+}
+
+#keywordContainer div.keyword{
+    height: 200px;
+    width: 180px;
+    position: absolute;
+    left: 300px;
+    top: 78px;
+}
+
+#keywordContainer div.keyword:nth-child(2){
+    left: 630px;
+    top: 40px;
+}
+
+#keywordContainer div.keyword:nth-child(3){
+    left: 630px;
+    top: 230px;
+}
+
+#keywordContainer div.keyword div.keywordLine{
+    height: 3px;
+    border-radius: 5px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    transform: rotate(25deg);
+}
+
+#keywordContainer div.keyword:nth-child(1) div.keywordLine{
+    background: #B1C7CA;
+}
+
+#keywordContainer div.keyword:nth-child(2) div.keywordLine{
+    transform: rotate(-200deg);
+    background: #CECACB;
+}
+
+#keywordContainer div.keyword:nth-child(3) div.keywordLine{
+    transform: rotate(-160deg);
+    background: #BC997D;
+}
+
+#keywordContainer div.keyword div.keywordLine div.keywordCircle{
+    width:120px;
+    height: 120px;
+    transform: rotate(-25deg);
+    position: absolute;
+    border-radius: 100%;
+    right: 60px;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#keywordContainer div.keyword:nth-child(1) div.keywordLine div.keywordCircle{
+    background: #B1C7CA;
+}
+
+#keywordContainer div.keyword:nth-child(2) div.keywordLine div.keywordCircle{
+    transform: rotate(200deg);
+    background: #CECACB;
+}
+
+#keywordContainer div.keyword:nth-child(3) div.keywordLine div.keywordCircle{
+    transform: rotate(160deg);
+    background: #BC997D;
+}
+
+#keywordContainer div.keyword div.keywordLine div.keywordCircle h2.keywordTitle{
+    margin:0;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+#titleContainer{
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+}
+
+#titleContainer h1{
+    margin: 0;
+    margin-top: 10px;
+}
+
+#titleContainer p{
+    margin: 0;
+    margin-top: 5px;
+}
+
+#menuContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    opacity: 0;
+}
+
+#menuContainer ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 800px;
+    position: relative;
+}
+
+#menuContainer li{
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#menuContainer li div{
+    position: absolute;
+    top:0;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#menuContainer li.active div{
+    background: #355A6C;
+}
+
+
+#menuContainer li div p{
+    margin:0;
+}
+
+#menuContainer li.active div p{
+    color: #fff;
+}
+
