@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(){
+    var cardNameTagContainer = document.getElementById('nametagImgContainer');
+    var keywordContainer = document.getElementById('keywordContainer');
+    var titleContainer = document.getElementById('titleContainer');
+    var menuContainer = document.getElementById('menuContainer');
 
     document.addEventListener('click', function(){
-        console.log("clicked");
-        var cardNameTagContainer = document.getElementById('nametagImgContainer');
-        var keywordContainer = document.getElementById('keywordContainer');
-        var titleContainer = document.getElementById('titleContainer');
-        var menuContainer = document.getElementById('menuContainer');
         
         cardNameTagContainer.animate([
             { transform: "translateY(-130px)"}
@@ -22,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function(){
         });
 
         titleContainer.animate([
-            { opacity: "1"}
+            { opacity: "1",
+             transform: "translateY(-120px)"}
         ], {
             duration: 500,
             fill: "forwards"
@@ -35,6 +35,22 @@ document.addEventListener("DOMContentLoaded", function(){
             fill: "forwards"
         });
         
+
     });
+
+    var keywordCircle = document.querySelectorAll("#keywordContainer > div.keyword > div.keywordLine > div.keywordCircle"); 
+    
+    for (var i = 0; i < keywordCircle.length; i++){
+        keywordCircle[i].addEventListener('mousedown', function(){
+
+            this.animate([
+                { width: "130px",
+                  height: "130px"}
+            ], {
+                duration: 2000,
+            });
+
+        });
+    }
 
 });
