@@ -81,36 +81,36 @@ body > div.container{
     background: #BC997D;
 }
 
-#keywordContainer div.keyword div.keywordLine div.keywordCircle{
+#keywordContainer div.keyword div.keywordCircle{
     width:180px;
     height: 180px;
-    transform: rotate(-25deg);
     position: absolute;
     border-radius: 100%;
     right: 60px;
-    top: -60px;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: visible !important;
 }
 
-#keywordContainer div.keyword:nth-child(1) div.keywordLine div.keywordCircle{
+#keywordContainer div.keyword:nth-child(1) div.keywordCircle{
     background: #B1C7CA;
 }
 
-#keywordContainer div.keyword:nth-child(2) div.keywordLine div.keywordCircle{
-    transform: rotate(200deg);
+#keywordContainer div.keyword:nth-child(2) div.keywordCircle{
     background: #CECACB;
+    right:-200px;
 }
 
-#keywordContainer div.keyword:nth-child(3) div.keywordLine div.keywordCircle{
-    transform: rotate(160deg);
+#keywordContainer div.keyword:nth-child(3) div.keywordCircle{
     background: #BC997D;
+    right:-200px;
+    top: 100px;
 }
 
-#keywordContainer div.keyword div.keywordLine div.keywordCircle h2.keywordTitle{
+#keywordContainer div.keyword div.keywordCircle h2.keywordTitle{
     margin:0;
     height: auto;
     text-align: center;

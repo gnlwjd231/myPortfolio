@@ -5,7 +5,22 @@ document.addEventListener("DOMContentLoaded", function(){
     var menuContainer = document.getElementById('menuContainer');
 
     document.addEventListener('click', function(){
-        
+
+        titleContainer.animate([
+            { opacity: "1",
+                transform: "translateY(-120px)"}
+        ], {
+            duration: 500,
+            fill: "forwards"
+        });
+
+        menuContainer.animate([
+            { opacity: "1"}
+        ], {
+            duration: 500,
+            fill: "forwards"
+        });
+
         cardNameTagContainer.animate([
             { transform: "translateY(-130px)"}
         ], {
@@ -20,37 +35,23 @@ document.addEventListener("DOMContentLoaded", function(){
             fill: "forwards"
         });
 
-        titleContainer.animate([
-            { opacity: "1",
-             transform: "translateY(-120px)"}
-        ], {
-            duration: 500,
-            fill: "forwards"
-        });
-
-        menuContainer.animate([
-            { opacity: "1"}
-        ], {
-            duration: 500,
-            fill: "forwards"
-        });
-        
-
     });
 
-    var keywordCircle = document.querySelectorAll("#keywordContainer > div.keyword > div.keywordLine > div.keywordCircle"); 
-    
-    for (var i = 0; i < keywordCircle.length; i++){
-        keywordCircle[i].addEventListener('mousedown', function(){
+    var keywordCircle = $("#keywordContainer > div.keyword > div.keywordLine > div.keywordCircle"); 
+    console.log(keywordCircle);
 
-            this.animate([
-                { width: "130px",
-                  height: "130px"}
-            ], {
-                duration: 2000,
-            });
+    keywordCircle.each(function( i ){
 
+        console.log($(this));
+
+        $(this).on("click",function(){
+            console.log(i)
+            console.log($(this).parent());
+
+            $(this).animate({ width: "130px" , height: "130px", right:"120px" }, 2000 );
+            $(this).parent().animate({ width:"75px"}, 2000);
         });
-    }
+
+    });
 
 });
