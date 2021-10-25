@@ -11,36 +11,53 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(vailForStartAnmiate);
 
     vailForStartAnmiate.on("click", function(){
-
-        console.log(vailForStartAnmiate);
-
-        vailForStartAnmiate.remove();
         
-        titleContainer.animate({
-            top: "-=100",
-            opacity: "1"
-        }, 500, function() {
-            $(this).css('opacity','1');
-            $(this).css('top','626.75px');
-        });
+        vailForStartAnmiate.remove();
 
-        cardNameTagContainer.animate({
-            top: "-=100",
-        }, 500, function() {
-            $(this).css('top','-100px');
-        });
+        if($('body').width() > 767){
 
-        menuContainer.animate({
-            opacity: "1"
-        }, 500, function() {
-            $(this).css('opacity','1');
-        });
+            titleContainer.animate({
+                top: "-=100",
+                opacity: "1"
+            }, 500, function() {
+                $(this).css('opacity','1');
+                // $(this).css('top','626.75px');
+            });
+    
+            cardNameTagContainer.animate({
+                top: "-=100",
+            }, 500, function() {
+                // $(this).css('top','-100px');
+            });
+    
+            menuContainer.animate({
+                opacity: "1"
+            }, 500, function() {
+                $(this).css('opacity','1');
+            });
+    
+            keywordContainer.animate({
+                opacity: "1"
+            }, 500, function() {
+                $(this).css('opacity','1');
+            });
 
-        keywordContainer.animate({
-            opacity: "1"
-        }, 500, function() {
-            $(this).css('opacity','1');
-        });
+        }else{
+
+            cardNameTagContainer.animate({
+                top: "-=10%",
+            }, 500, function() {
+                // $(this).css('top','-100px');
+            });
+
+            keywordContainer.animate({
+                opacity: "1"
+            }, 500, function() {
+                $(this).css('opacity','1');
+            });
+        }
+        
+        
 
     });
 
@@ -86,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 opacity: "0"
             }, 500, function() {
                 $(this).css('opacity','0');
-                $(this).css('top','526.75px');
+                // $(this).css('top','526.75px');
             });
 
             cardNameTagContainer.animate({
@@ -94,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 opacity: "0"
             }, 500, function() {
                 $(this).css('opacity','0');
-                $(this).css('top','-200px');
+                // $(this).css('top','-200px');
             });
 
             keywordContainer.animate({
@@ -102,17 +119,17 @@ document.addEventListener("DOMContentLoaded", function(){
                 opacity: "0"
             }, 500, function() {
                 $(this).css('opacity','0');
-                $(this).css('top','-300px');
+                // $(this).css('top','-300px');
             });
 
             menuContainer.animate({
                 top: "-=780px",
             }, 1100, function() {
-                $(this).css('top', '60.109px');
+                // $(this).css('top', '60.109px');
             });
 
         }else{
-
+            console.log($(this));
         }
         
     });
