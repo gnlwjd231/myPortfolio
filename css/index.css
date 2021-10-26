@@ -7,7 +7,7 @@ html, body {
     overflow: hidden;
 }
 
-h1,h2,h3,h4{
+p,h1,h2,h3,h4{
     margin:0
 }
 
@@ -33,7 +33,6 @@ body{
     }
     
     div#nametagKeywordContainer{
-        background: blue;
         height: 70%;
         position: relative;
     }
@@ -41,7 +40,6 @@ body{
     div#nametagImgContainer{
         width: 20%;
         height: 100%;
-        background:green;
         position: absolute;
         left: 40%;
         box-sizing: border-box;
@@ -58,7 +56,6 @@ body{
     div#keywordContainer{
         width:100%;
         height: 100%;
-        background: gray;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -66,29 +63,28 @@ body{
     
     div#keywordContainer > div.keyword{
         width: 240px;
-        height: 150px;
-        background: blue;
+        height: 150px;        
         position: absolute;
     }
 
     div#keywordContainer > div.keyword:nth-child(1){
-        left: 10%;
+        right: 65%;
     }
 
     div#keywordContainer > div.keyword:nth-child(2){
-        right: 10%;
+        left: 65%;
         bottom: 50%;
     }
 
     div#keywordContainer > div.keyword:nth-child(3){
-        right: 10%;
+        left: 65%;
         bottom: 10%;
     }
     
     div#keywordContainer > div.keyword > div.keywordCircle{
         width: 150px;
         height: 150px;
-        background: red;
+        background: #B1C7CA;
         border-radius: 100px;
         display: flex;
         align-items: center;
@@ -102,13 +98,52 @@ body{
         right:0px;
     }
 
+    div#keywordContainer > div.keyword:nth-child(2) > div.keywordCircle{
+        background: #CECACB;
+    }
+
+    div#keywordContainer > div.keyword:nth-child(3) > div.keywordCircle{
+        background:#BC997D;
+    }
+
+    div#keywordContainer > div.keyword > div.keywordLine{
+        background: #B1C7CA;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        right: 10px;
+        bottom: 12px;
+        transform: rotate(30deg);
+    }
+
+    div#keywordContainer > div.keyword:nth-child(2) > div.keywordLine{
+        left: 10px;
+        transform: rotate(-30deg);
+        background: #CECACB;
+    }
+
+    div#keywordContainer > div.keyword:nth-child(3) > div.keywordLine{
+        left: 10px;
+        top: 12px;
+        background:#BC997D;
+    }
+
     div#keywordContainer > div.keyword > div.keywordCircle > h2.keywordTitle-mobile{
         display:none;
     }
+
+    div.keywordCircle h2{
+        font-size: 18px;
+    }
+
     
     div#titleContainer{
-        background: yellow;
         height: 15%;
+        text-align: center;
+        word-break: keep-all;
+    }
+
+    div#titleContainer h1{
     }
     
     div#menuContainer{
@@ -125,7 +160,6 @@ body{
     }
 
     div#nametagKeywordContainer{
-        background: blue;
         height: 80vh;
         width: 100%;
         display:flex;
@@ -134,8 +168,7 @@ body{
 
     div#nametagImgContainer{
         width: 100%;
-        height: 65%;
-        background:green;
+        height: 75%;
         position: relative;
         display: flex;
         justify-content: center;
@@ -149,29 +182,44 @@ body{
     
     div#keywordContainer{
         width:100%;
-        height: 35%;
-        background: gray;
+        height: 25%;
         position: relative;
     }
 
     div#keywordContainer > div.keyword{
         width: 100%;
         height: 33%;
-        background: blue;
         display: flex;
         justify-content: center;
-        padding: 5px 0 0 3px;
+        padding: 8px 0 3px 0;
+        box-sizing: border-box;
     }
     
     div#keywordContainer > div.keyword > div.keywordCircle{
-        width: 90%;
+        width: 60%;
+        min-width: 230px;
+        max-width: 276px;
         height: 90%;
-        background: red;
+        background: #B1C7CA;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        font-size: 24px;
+        font-size: 1.5vh;
+    }
+
+    div#keywordContainer > div.keyword > div.keywordCircle h2{
+        font-weight: 500;
+    }
+
+    div#keywordContainer > div.keyword:nth-child(2) > div.keywordCircle{
+        background:#CECACB;
+    }
+
+    div#keywordContainer > div.keyword:nth-child(3) > div.keywordCircle{
+        background:#BC997D;
     }
 
     div#keywordContainer > div.keyword > div.keywordCircle > h2.keywordTitle-web{
@@ -180,8 +228,13 @@ body{
 
     
     div#titleContainer{
-        background: yellow;
         height: 20vh;
+        text-align: center;
+        word-break: keep-all;
+    }
+
+    div#titleContainer h1{
+        text-align: center;
     }
     
     div#menuContainer{
